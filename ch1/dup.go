@@ -4,16 +4,13 @@ import (
     "bufio"
     "fmt"
     "os"
-    "strings"
 )
 
 func main() {
     counts := make(map[string]int)
     input := bufio.NewScanner(os.Stdin)
+
     for input.Scan() {
-        if strings.EqualFold(input.Text(), "quit") {
-            break
-        }
         counts[input.Text()]++
     }
 
