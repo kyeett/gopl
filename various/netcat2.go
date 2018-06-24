@@ -11,6 +11,10 @@ import (
 	"time"
 )
 
+// Usage:
+//  go run netcat2.go
+//  nc localhost 8000
+
 func main() {
 	listener, err := net.Listen("tcp", "localhost:8000")
 	if err != nil {
